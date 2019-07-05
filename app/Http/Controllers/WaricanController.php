@@ -24,7 +24,9 @@ class WaricanController extends Controller {
     //トップページ表示
     public function top () {
         $key = session()->pull('key');
-        $chk = "http://75dadab680c248839d271828d1603090.vfs.cloud9.ap-northeast-1.amazonaws.com/join/?_key=".$key;
+        $lolipop = url()->current();///実験
+        //$chk = "http://75dadab680c248839d271828d1603090.vfs.cloud9.ap-northeast-1.amazonaws.com/join/?_key=".$key;
+        $chk = $lolipop.$key;////実験
         
         if (session()->has('url')) { 
             $url = session()->pull('url');

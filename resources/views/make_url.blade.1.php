@@ -5,12 +5,10 @@
             <p class="mleft">飲み会企画を作成しました！<br>
             URLをコピーして参加見込み者にシェアしてください。</p>
     
-            <input id="copyTarget" type="textarea" class="urlcopy" value="{{ str_replace('/plan/store', '', url()->current()) }}/join/?_key={{$randomString}}" readonly>
+            <input id="copyTarget" type="textarea" class="urlcopy" value="https://75dadab680c248839d271828d1603090.vfs.cloud9.ap-northeast-1.amazonaws.com/join/?_key={{$randomString}}" readonly>
             <button onclick="copyToClipboard()">URLをコピー</button>
         </div>
-    </div>+
-    
-    
+    </div>
     
            
     <script>

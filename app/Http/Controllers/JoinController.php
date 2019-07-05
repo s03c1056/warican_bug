@@ -37,7 +37,9 @@ class JoinController extends Controller {
        
         }else{
             $key = $request->input('_key');
-            $url = "http://75dadab680c248839d271828d1603090.vfs.cloud9.ap-northeast-1.amazonaws.com/join/?_key={$key}";
+            $lolipop = url()->current();
+            //$url = "http://75dadab680c248839d271828d1603090.vfs.cloud9.ap-northeast-1.amazonaws.com/join/?_key={$key}";
+            $url = $lolipop."/join/?_key={$key}";
         session(['url' => $url, 'key' => $key]);
         // var_dump($all);
         // exit();
